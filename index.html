@@ -6,10 +6,58 @@
 			<meta name="theme-color" content="#000000">
 			<meta content="IE=Edge" http-equiv="X-UA-Compatible">
 			<title>Годовщина 3 года</title>
+			<style>
+				body
+				{
+					width: 100%;
+					height: 100%;
+					background-color: rgb(245, 247, 214);
+					margin: 0;
+					padding: 0;
+				}		
+				.maincontainer{
+					position: relative;
+					width: 720px;
+					height: 320px;
+					margin: auto;
+					margin-top: 320px;
+				}
+				.Card{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					transform-style: preserve-3d;
+					transition: all 0.5s ease;
+				}
+				.Card:hover
+				{
+					transform: rotateX(180deg);
+				}
+				.front{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					backface-visibility: hidden;	
+					border-radius: 5px;
+
+				}
+				.back{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					backface-visibility: hidden;
+					transform: rotateX(180deg);					
+				}
+			</style>
 	</head>
 	<body>
-		<p>
-				Привет дарова
-		</P>
+		
+		<div class="maincontainer">
+			<div class="Card">
+				<img class="front" src="./img/FrontOfCard.svg">
+				<img class="back" src="./img/BacksideOfCard.svg">
+			</div>
+		</div>
+		
 	</body>
 </html>
